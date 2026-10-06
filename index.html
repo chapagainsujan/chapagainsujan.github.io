@@ -4,23 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sujan Chapagain — Agricultural Researcher specializing in plant pathology, crop stress, and plant breeding.">
+    <meta name="description" content="Sujan Chapagain Research Group — World-class laboratory in plant pathology, crop stress physiology, and computational agricultural biology.">
     <meta name="author" content="Sujan Chapagain">
 
-    <title>Sujan Chapagain | Agricultural Researcher</title>
+    <title>Sujan Chapagain Lab | Plant Pathology &amp; Agricultural Innovation</title>
 
-    <!-- Google Fonts: Bebas Neue for Big Bold Headers & Inter for Clean Nav/Body -->
+    <!-- Google Fonts: Plus Jakarta Sans for Headers & Inter for Crisp Text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         /* =========================================================
-           GLOBAL RESETS & FONTS
+           GLOBAL RESETS & DESIGN TOKENS
            ========================================================= */
+        :root {
+            --primary-red: #ba0c2f;
+            --primary-dark-red: #8b0000;
+            --deep-black: #0f172a;
+            --body-text: #334155;
+            --muted-text: #64748b;
+            --bg-light: #f8fafc;
+            --card-border: #e2e8f0;
+            --white: #ffffff;
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -32,11 +45,12 @@
         }
 
         body {
-            background-color: #ffffff;
-            color: #222222;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            font-size: 17px;
+            background-color: var(--white);
+            color: var(--body-text);
+            font-family: var(--font-body);
+            font-size: 16px;
             line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
         }
 
         a {
@@ -44,57 +58,107 @@
             text-decoration: none;
         }
 
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
         /* =========================================================
-           TOP INSTITUTIONAL BAR
+           TOP INSTITUTIONAL HEADER
            ========================================================= */
-        .top-bar {
-            background-color: #111111;
-            color: #ffffff;
+        .top-institution-bar {
+            background-color: var(--deep-black);
+            color: #94a3b8;
             font-size: 13px;
             font-weight: 500;
-            padding: 8px 40px;
+            padding: 10px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #222222;
+            border-bottom: 1px solid #1e293b;
         }
 
-        .top-bar a {
-            color: #ffffff;
+        .top-institution-bar strong {
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .top-institution-bar a {
+            color: #cbd5e1;
             text-decoration: underline;
         }
 
-        .top-bar .search-box {
+        .search-trigger {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            cursor: pointer;
+            color: var(--white);
+            background: #1e293b;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            transition: background 0.2s;
+        }
+
+        .search-trigger:hover {
+            background: var(--primary-red);
         }
 
         /* =========================================================
-           MAIN BRANDING HEADER
+           BRANDING HEADER
            ========================================================= */
         .brand-header {
-            background-color: #f4f4f4;
-            padding: 24px 40px;
-            border-bottom: 1px solid #e2e2e2;
+            background-color: var(--white);
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--card-border);
         }
 
-        .brand-header h1 {
-            font-family: 'Bebas Neue', cursive, sans-serif;
-            font-size: 56px;
-            font-weight: 400;
-            letter-spacing: 1.5px;
-            color: #111111;
-            line-height: 1;
+        .brand-header .title-group h1 {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--deep-black);
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .brand-header .title-group p {
+            font-size: 15px;
+            color: var(--muted-text);
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .header-cta {
+            background-color: var(--deep-black);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        .header-cta:hover {
+            background-color: var(--primary-red);
         }
 
         /* =========================================================
-           PROMINENT & LARGE NAVIGATION BAR
+           PROMINENT NAVIGATION BAR
            ========================================================= */
         .main-nav {
-            background-color: #ba0c2f; /* UGA Red */
-            padding: 0 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background-color: var(--primary-red);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .nav-menu {
@@ -106,45 +170,102 @@
 
         .nav-menu li a {
             display: block;
-            padding: 16px 22px;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            font-size: 21px; /* BIG TEXT SIZE */
-            font-weight: 800; /* BOLD */
+            padding: 18px 22px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 18px; /* Large, clear text size */
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            transition: background 0.2s ease, color 0.2s ease;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: background 0.2s ease;
         }
 
         .nav-menu li a:hover,
         .nav-menu li.active a {
-            background-color: #8b0000;
-            color: #ffffff;
+            background-color: var(--primary-dark-red);
         }
 
         /* =========================================================
-           HERO BANNER
+           HERO SECTION WITH HIGH-RES UN SPLASH BACKGROUND
            ========================================================= */
-        .hero-banner {
-            max-width: 1300px;
-            margin: 25px auto 0;
+        .hero-section {
             position: relative;
-            height: 400px;
-            background: #222 url('Image/aa.webp') center/cover no-repeat;
+            height: 520px;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
             display: flex;
             align-items: flex-end;
             justify-content: center;
+            color: var(--white);
         }
 
-        .hero-caption {
+        .hero-content {
+            max-width: 1200px;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.82);
-            color: #ffffff;
-            padding: 18px 30px;
+            padding: 50px 40px;
+        }
+
+        .hero-tag {
+            background-color: var(--primary-red);
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h2 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 15px;
+            max-width: 900px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: #e2e8f0;
+            max-width: 800px;
+            font-weight: 400;
+        }
+
+        /* =========================================================
+           IMPACT STATS BAR
+           ========================================================= */
+        .stats-bar {
+            background-color: var(--deep-black);
+            color: var(--white);
+            padding: 30px 40px;
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             text-align: center;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 32px;
-            letter-spacing: 1.2px;
+        }
+
+        .stat-item h3 {
+            font-family: var(--font-heading);
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary-red);
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         /* =========================================================
@@ -153,47 +274,62 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 70px 20px;
+        }
+
+        .section-header {
+            margin-bottom: 35px;
         }
 
         .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 46px;
-            letter-spacing: 1px;
-            color: #111111;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #ba0c2f;
+            font-family: var(--font-heading);
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--deep-black);
+            position: relative;
             display: inline-block;
-            padding-bottom: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background-color: var(--primary-red);
+            margin-top: 8px;
         }
 
         .about-text {
             font-size: 18px;
-            color: #333333;
+            color: var(--body-text);
             line-height: 1.8;
-            margin-top: 15px;
             text-align: justify;
         }
 
         /* =========================================================
-           COMPLETED PROJECTS
+           RESEARCH PROJECTS GRID
            ========================================================= */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-top: 25px;
         }
 
         .project-card {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: var(--white);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
         .project-card img {
@@ -203,32 +339,56 @@
         }
 
         .project-card-content {
-            padding: 20px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-card .tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
 
         .project-card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            letter-spacing: 0.5px;
-            color: #ba0c2f;
-            margin-bottom: 8px;
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--deep-black);
+            margin-bottom: 10px;
+            line-height: 1.3;
         }
 
         .project-card p {
             font-size: 15px;
-            color: #555555;
-            line-height: 1.5;
+            color: var(--muted-text);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-card .card-footer {
+            margin-top: auto;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--deep-black);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         /* =========================================================
-           RESEARCH HIGHLIGHTS
+           HIGHLIGHTS SECTION
            ========================================================= */
         .highlights-section {
-            background-color: #f8f8f8;
-            border-top: 1px solid #e5e5e5;
-            border-bottom: 1px solid #e5e5e5;
-            padding: 50px 0;
-            margin-top: 40px;
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+            padding: 70px 0;
+            margin-top: 50px;
         }
 
         .highlights-grid {
@@ -240,17 +400,30 @@
             padding: 0 20px;
         }
 
-        .highlight-box h2 {
-            font-family: 'Bebas Neue', sans-serif;
+        .highlight-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+        }
+
+        .highlight-box i {
             font-size: 32px;
-            letter-spacing: 0.8px;
-            color: #111111;
-            margin-bottom: 10px;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .highlight-box h2 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--deep-black);
+            margin-bottom: 12px;
         }
 
         .highlight-box p {
-            font-size: 16px;
-            color: #444444;
+            font-size: 15px;
+            color: var(--muted-text);
             line-height: 1.6;
         }
 
@@ -258,9 +431,9 @@
            FOOTER
            ========================================================= */
         .footer-info {
-            background-color: #eeeeee;
-            padding: 45px 20px;
-            border-top: 1px solid #dddddd;
+            background-color: #0f172a;
+            color: var(--white);
+            padding: 60px 20px 40px;
         }
 
         .footer-container {
@@ -268,99 +441,93 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 40px;
+            gap: 50px;
         }
 
         .footer-left h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 32px;
-            letter-spacing: 0.8px;
-            color: #111111;
-            margin-bottom: 5px;
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 10px;
         }
 
         .footer-left p {
             font-size: 15px;
-            color: #444444;
-            margin-bottom: 4px;
+            color: #94a3b8;
+            margin-bottom: 6px;
         }
 
         .footer-left a {
-            color: #ba0c2f;
-            font-weight: 600;
+            color: var(--white);
             text-decoration: underline;
         }
 
-        .footer-right {
-            text-align: right;
-        }
-
         .footer-right h4 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 0.5px;
-            color: #111111;
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
         .social-links {
-            margin-top: 12px;
             display: flex;
-            justify-content: flex-end;
             gap: 12px;
         }
 
         .social-links a {
-            width: 42px;
-            height: 42px;
-            background: #111111;
-            color: #ffffff;
-            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            background: #1e293b;
+            color: var(--white);
+            border-radius: 6px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            transition: background 0.2s ease, transform 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         .social-links a:hover {
-            background: #ba0c2f;
-            transform: translateY(-2px);
+            background: var(--primary-red);
+            transform: translateY(-3px);
         }
 
         .copyright-bar {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #020617;
+            color: #64748b;
             font-size: 13px;
-            padding: 14px 40px;
+            padding: 18px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .back-to-top {
-            background-color: #ba0c2f;
-            color: #ffffff;
+            background-color: var(--primary-red);
+            color: var(--white);
             padding: 8px 16px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
+            border-radius: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        /* Responsive */
+        /* Responsive Breakpoints */
         @media (max-width: 900px) {
+            .brand-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
             .nav-menu li a {
-                font-size: 18px;
+                font-size: 16px;
                 padding: 12px 14px;
+            }
+            .hero-content h2 {
+                font-size: 34px;
             }
             .footer-container {
                 grid-template-columns: 1fr;
-            }
-            .footer-right {
-                text-align: left;
-            }
-            .social-links {
-                justify-content: flex-start;
             }
         }
     </style>
@@ -368,25 +535,169 @@
 
 <body>
 
-    <!-- Top Institutional Bar -->
-    <div class="top-bar">
-        <span>UN</span>
-        <span>A website from the <a href="#">VVVVVVVVVVVVV</a></span>
-        <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i> Search
+    <!-- Institutional Utility Header Bar -->
+    <div class="top-institution-bar">
+        <span><strong>UNIVERSITY OF GEORGIA</strong> &nbsp;|&nbsp; College of Agricultural and Environmental Sciences</span>
+        <div class="search-trigger">
+            <i class="fa-solid fa-magnifying-glass"></i> Search Research Directory
         </div>
     </div>
 
     <!-- Main Branding Header -->
     <header class="brand-header">
-        <h1>Sujan Chapagain Lab</h1>
+        <div class="title-group">
+            <h1>Sujan Chapagain Lab</h1>
+            <p>Laboratory of Plant Pathology, Stress Physiology &amp; Crop Improvement</p>
+        </div>
+        <a href="contact.html" class="header-cta"><i class="fa-solid fa-paper-plane"></i> Join Our Lab</a>
     </header>
 
-    <!-- Navigation Bar with Large Text Size -->
+    <!-- Prominent Navigation Bar -->
     <nav class="main-nav">
         <ul class="nav-menu">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="Education.html">Education</a></li>
             <li><a href="Publications.html">Publications</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="Conferences
+            <li><a href="Conferences.html">Conferences</a></li>
+            <li><a href="Award.html">Awards</a></li>
+            <li><a href="Affilations.html">Affiliations</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- World-Class Hero Section (Unsplash Imagery) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-tag">Pioneering Research</span>
+            <h2>Characterizing Plant Pathology &amp; Climate Resilience in Crops</h2>
+            <p>Advancing molecular diagnostics, phenotyping under abiotic stress, and botanical solutions for sustainable crop protection.</p>
+        </div>
+    </section>
+
+    <!-- Impact Statistics Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>15+</h3>
+                <p>Peer-Reviewed Publications</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Germplasm Phenotyped</p>
+            </div>
+            <div class="stat-item">
+                <h3>4+</h3>
+                <p>Active Research Grants</p>
+            </div>
+            <div class="stat-item">
+                <h3>Q1</h3>
+                <p>Journal Contributions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Overview Section -->
+    <main class="container">
+        <div class="section-header">
+            <h2 class="section-title">Research Profile &amp; Mission</h2>
+        </div>
+        <p class="about-text">
+            The Chapagain Laboratory focuses on integrating plant breeding, crop stress physiology, and plant pathology to address emerging challenges in global food security. Our team utilizes high-throughput field phenotyping tools—such as NDVI spectral indices and canopy thermal imaging—alongside molecular diagnostic assays to evaluate biotic and abiotic stress responses in staple crops. Through multi-environment evaluations, we aim to accelerate the development of disease-resistant, drought-tolerant crop cultivars.
+        </p>
+
+        <!-- Completed & Active Projects Section -->
+        <div style="margin-top: 60px;">
+            <div class="section-header">
+                <h2 class="section-title">Featured Research Thrusts</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80" alt="Citrus Pathology Lab Work">
+                    <div class="project-card-content">
+                        <span class="tag">Postharvest Pathology</span>
+                        <h3>Citrus Green Mold &amp; Eco-Fungicides</h3>
+                        <p>Characterization of <em>Penicillium digitatum</em> isolates and evaluation of botanical extracts for non-chemical postharvest citrus decay control.</p>
+                        <div class="card-footer">Explore Research Thrust <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Wheat Field Phenotyping">
+                    <div class="project-card-content">
+                        <span class="tag">Stress Physiology</span>
+                        <h3>Wheat Drought &amp; Rust Screening</h3>
+                        <p>Integration of NDVI, canopy temperature depression, and leaf rust progression modeling in water-stressed cereal systems.</p>
+                        <div class="card-footer">Explore Research Thrust <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1592417817098-8f3d6ef23a81?auto=format&fit=crop&w=800&q=80" alt="Maize & Millet Genetics">
+                    <div class="project-card-content">
+                        <span class="tag">Crop Genetics</span>
+                        <h3>Phenotypic Diversity &amp; Traits</h3>
+                        <p>Agromorphological characterization, multivariate clustering, and trait association analysis in maize and finger millet landraces.</p>
+                        <div class="card-footer">Explore Research Thrust <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="highlights-grid">
+            <div class="highlight-box">
+                <i class="fa-solid fa-dna"></i>
+                <h2>Molecular Capabilities</h2>
+                <p>DNA/RNA extraction, PCR optimization, marker-assisted selection, gel electrophoresis, and pathogen diagnostics.</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>Analytics &amp; Modeling</h2>
+                <p>Mixed models, ANOVA multi-environment trial evaluation, PCA, clustering, and epidemiological disease progression modeling in R.</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fa-solid fa-wheat-awn"></i>
+                <h2>Field Phenotyping</h2>
+                <p>Precision canopy temperature sensors, multispectral NDVI assessment, disease scoring scales, and experimental design (RCBD, Alpha Lattice).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Information -->
+    <footer class="footer-info">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Sujan Chapagain</h3>
+                <p>Researcher in Plant Pathology &amp; Crop Improvement</p>
+                <p>Department of Plant Pathology, University of Georgia</p>
+                <p>Email: <a href="mailto:chapagainsujan45@gmail.com">chapagainsujan45@gmail.com</a></p>
+            </div>
+            <div class="footer-right">
+                <h4>Academic Networks</h4>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+                    <a href="https://github.com/sujan4445" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/Iamsujan45" target="_blank" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.researchgate.net/profile/Sujan-Chapagain-2?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://orcid.org/0000-0002-2037-3491" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Copyright -->
+    <div class="copyright-bar">
+        <span>&copy; 2026 Sujan Chapagain Laboratory. All Rights Reserved.</span>
+        <a href="#" class="back-to-top">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+</body>
+</html>
