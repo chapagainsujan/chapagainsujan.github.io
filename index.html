@@ -9,17 +9,17 @@
 
     <title>Sujan Chapagain | Agricultural Researcher</title>
 
-    <!-- Google Fonts (Oswald for headers, Open Sans for body/nav) -->
+    <!-- Google Fonts: Bebas Neue for Big Bold Headers & Inter for Clean Nav/Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         /* =========================================================
-           GLOBAL RESETS & BASE STYLES
+           GLOBAL RESETS & FONTS
            ========================================================= */
         * {
             margin: 0;
@@ -33,10 +33,10 @@
 
         body {
             background-color: #ffffff;
-            color: #333333;
-            font-family: 'Open Sans', Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
+            color: #222222;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
         }
 
         a {
@@ -45,201 +45,226 @@
         }
 
         /* =========================================================
-           UGA TOP INSTITUTIONAL BAR
+           TOP INSTITUTIONAL BAR
            ========================================================= */
-        .uga-top-bar {
-            background-color: #000000;
+        .top-bar {
+            background-color: #111111;
             color: #ffffff;
             font-size: 13px;
-            padding: 6px 40px;
+            font-weight: 500;
+            padding: 8px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #222222;
         }
 
-        .uga-top-bar a {
+        .top-bar a {
             color: #ffffff;
             text-decoration: underline;
         }
 
-        .uga-top-bar .search-box {
-            font-size: 12px;
+        .top-bar .search-box {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
 
         /* =========================================================
-           BRANDING HEADER
+           MAIN BRANDING HEADER
            ========================================================= */
         .brand-header {
-            background-color: #eeeeee;
-            padding: 30px 40px;
+            background-color: #f4f4f4;
+            padding: 24px 40px;
+            border-bottom: 1px solid #e2e2e2;
         }
 
         .brand-header h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 42px;
-            font-weight: 700;
-            color: #000000;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            font-family: 'Bebas Neue', cursive, sans-serif;
+            font-size: 56px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: #111111;
+            line-height: 1;
         }
 
         /* =========================================================
-           NAVIGATION BAR (UGA RED)
+           PROMINENT & LARGE NAVIGATION BAR
            ========================================================= */
         .main-nav {
-            background-color: #ba0c2f;
-            padding: 0 40px;
+            background-color: #ba0c2f; /* UGA Red */
+            padding: 0 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .nav-menu li a {
             display: block;
-            padding: 12px 18px;
+            padding: 16px 22px;
             color: #ffffff;
-            font-weight: 600;
-            font-size: 15px;
-            transition: background 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            font-size: 21px; /* BIG TEXT SIZE */
+            font-weight: 800; /* BOLD */
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: background 0.2s ease, color 0.2s ease;
         }
 
         .nav-menu li a:hover,
         .nav-menu li.active a {
             background-color: #8b0000;
+            color: #ffffff;
         }
 
         /* =========================================================
-           HERO SLIDER / MAIN BANNER
+           HERO BANNER
            ========================================================= */
         .hero-banner {
-            max-width: 1200px;
-            margin: 20px auto;
+            max-width: 1300px;
+            margin: 25px auto 0;
             position: relative;
-            height: 380px;
+            height: 400px;
             background: #222 url('Image/aa.webp') center/cover no-repeat;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
         }
 
         .hero-caption {
-            background-color: rgba(0, 0, 0, 0.85);
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.82);
             color: #ffffff;
-            padding: 15px 30px;
+            padding: 18px 30px;
             text-align: center;
-            font-size: 18px;
-            font-weight: 600;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            letter-spacing: 1.2px;
         }
 
         /* =========================================================
-           PAGE SECTIONS & CONTENT
+           MAIN CONTENT AREA
            ========================================================= */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .section-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 32px;
-            text-align: center;
-            color: #222222;
-            margin-bottom: 20px;
-            font-weight: 600;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 46px;
+            letter-spacing: 1px;
+            color: #111111;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #ba0c2f;
+            display: inline-block;
+            padding-bottom: 2px;
         }
 
         .about-text {
-            font-size: 16px;
-            color: #444444;
-            line-height: 1.7;
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.8;
+            margin-top: 15px;
             text-align: justify;
         }
 
         /* =========================================================
-           PROJECTS GRID
+           COMPLETED PROJECTS
            ========================================================= */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
         }
 
         .project-card {
             background: #ffffff;
             border: 1px solid #e0e0e0;
-            text-align: center;
-            padding-bottom: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         .project-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
 
+        .project-card-content {
+            padding: 20px;
+        }
+
         .project-card h3 {
-            font-size: 18px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            letter-spacing: 0.5px;
             color: #ba0c2f;
-            margin: 15px 10px 5px;
+            margin-bottom: 8px;
         }
 
         .project-card p {
-            font-size: 14px;
-            color: #666666;
-            padding: 0 15px;
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.5;
         }
 
         /* =========================================================
-           HIGHLIGHTS / THREE COLUMN BLOCK
+           RESEARCH HIGHLIGHTS
            ========================================================= */
         .highlights-section {
-            background-color: #f7f7f7;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 40px 0;
+            background-color: #f8f8f8;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 50px 0;
             margin-top: 40px;
         }
 
         .highlights-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 35px;
             padding: 0 20px;
         }
 
         .highlight-box h2 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 22px;
-            color: #222222;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            letter-spacing: 0.8px;
+            color: #111111;
             margin-bottom: 10px;
         }
 
         .highlight-box p {
-            font-size: 14px;
-            color: #555555;
+            font-size: 16px;
+            color: #444444;
+            line-height: 1.6;
         }
 
         /* =========================================================
-           FOOTER / CONTACT AREA
+           FOOTER
            ========================================================= */
         .footer-info {
-            background-color: #ececec;
-            padding: 40px 20px;
-            border-top: 1px solid #dcdcdc;
+            background-color: #eeeeee;
+            padding: 45px 20px;
+            border-top: 1px solid #dddddd;
         }
 
         .footer-container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -247,19 +272,22 @@
         }
 
         .footer-left h3 {
-            font-size: 18px;
-            font-weight: 700;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            letter-spacing: 0.8px;
+            color: #111111;
             margin-bottom: 5px;
         }
 
         .footer-left p {
-            font-size: 14px;
+            font-size: 15px;
             color: #444444;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .footer-left a {
             color: #ba0c2f;
+            font-weight: 600;
             text-decoration: underline;
         }
 
@@ -267,34 +295,43 @@
             text-align: right;
         }
 
+        .footer-right h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            color: #111111;
+        }
+
         .social-links {
-            margin-top: 15px;
+            margin-top: 12px;
             display: flex;
             justify-content: flex-end;
-            gap: 10px;
+            gap: 12px;
         }
 
         .social-links a {
-            width: 36px;
-            height: 36px;
-            background: #222222;
+            width: 42px;
+            height: 42px;
+            background: #111111;
             color: #ffffff;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 18px;
+            transition: background 0.2s ease, transform 0.2s ease;
         }
 
         .social-links a:hover {
             background: #ba0c2f;
+            transform: translateY(-2px);
         }
 
         .copyright-bar {
             background-color: #000000;
             color: #ffffff;
-            font-size: 12px;
-            padding: 12px 40px;
+            font-size: 13px;
+            padding: 14px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -303,14 +340,19 @@
         .back-to-top {
             background-color: #ba0c2f;
             color: #ffffff;
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: 600;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav-menu li a {
+                font-size: 18px;
+                padding: 12px 14px;
+            }
             .footer-container {
                 grid-template-columns: 1fr;
             }
@@ -326,8 +368,8 @@
 
 <body>
 
-    <!-- Top University Banner -->
-    <div class="uga-top-bar">
+    <!-- Top Institutional Bar -->
+    <div class="top-bar">
         <span>UNIVERSITY OF GEORGIA</span>
         <span>A website from the <a href="#">College of Agricultural and Environmental Sciences</a></span>
         <div class="search-box">
@@ -340,103 +382,11 @@
         <h1>Sujan Chapagain Lab</h1>
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar with Large Text Size -->
     <nav class="main-nav">
         <ul class="nav-menu">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="Education.html">Education</a></li>
             <li><a href="Publications.html">Publications</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="Conferences.html">Conferences</a></li>
-            <li><a href="Award.html">Awards</a></li>
-            <li><a href="Affilations.html">Affiliations</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Banner Carousel Placeholder -->
-    <div class="hero-banner">
-        <div class="hero-caption">
-            Plant Pathology, Crop Health &amp; Resilient Cropping Systems
-        </div>
-    </div>
-
-    <!-- Main Content / Research Profile -->
-    <main class="container">
-        <h2 class="section-title">Research Profile</h2>
-        <p class="about-text">
-            Sujan Chapagain is an agriculture graduate and researcher specializing in plant breeding, horticulture, plant pathology, and crop stress physiology. His research experience spans abiotic and biotic stress screening, field phenotyping, postharvest pathology, and sustainable disease management. He has contributed to projects on drought tolerance in wheat, NDVI and canopy temperature-based phenotyping, wheat leaf rust screening, and citrus postharvest green mold management using botanical extracts.
-        </p>
-
-        <!-- Completed Projects Grid -->
-        <h2 class="section-title" style="margin-top: 50px;">Completed Projects</h2>
-        <div class="projects-grid">
-            <article class="project-card">
-                <img src="Image/mould.jpg" alt="Citrus Pathology">
-                <h3>Citrus Pathology &amp; Post Harvest</h3>
-                <p>Pathogen characterization, disease assessment, and eco-friendly approaches to citrus health.</p>
-            </article>
-
-            <article class="project-card">
-                <img src="Image/aac.jpg" alt="Wheat Research">
-                <h3>Wheat Stress Phenotyping</h3>
-                <p>Drought tolerance, disease response, NDVI, canopy temperature, and crop assessment.</p>
-            </article>
-
-            <article class="project-card">
-                <img src="Image/fig7.jpg" alt="Finger Millet Research">
-                <h3>Finger Millet Diversity</h3>
-                <p>Agromorphological characterization, diversity analysis, and trait-based crop improvement.</p>
-            </article>
-        </div>
-    </main>
-
-    <!-- Highlights Section -->
-    <section class="highlights-section">
-        <div class="highlights-grid">
-            <div class="highlight-box">
-                <h2>Professional Skills</h2>
-                <p>DNA Extraction, PCR, Marker Design, Disease Screening, Field Phenotyping, Experimental Design, R, Python, GIS, Scientific Writing.</p>
-            </div>
-            <div class="highlight-box">
-                <h2>Personal Skills</h2>
-                <p>Creativity, Teamwork, Leadership, Communication, Adaptability, Problem Solving, Research Methodology.</p>
-            </div>
-            <div class="highlight-box">
-                <h2>Research Focus</h2>
-                <p>Plant Pathology, Crop Health, Disease Management, Genetics &amp; Genomics, Sustainable Agriculture, Climate-Resilient Agriculture.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Contact Info -->
-    <footer class="footer-info">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h3>Sujan Chapagain</h3>
-                <p>Agricultural Researcher</p>
-                <p>Bharatpur, Nepal</p>
-                <p>Email: <a href="mailto:chapagainsujan45@gmail.com">chapagainsujan45@gmail.com</a></p>
-            </div>
-            <div class="footer-right">
-                <p><strong>Connect with us</strong></p>
-                <div class="social-links">
-                    <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                    <a href="https://github.com/sujan4445" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com/Iamsujan45" target="_blank" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.researchgate.net/profile/Sujan-Chapagain-2?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                    <a href="https://orcid.org/0000-0002-2037-3491" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Copyright Bar -->
-    <div class="copyright-bar">
-        <span>&copy; 2026 Sujan Chapagain. All Rights Reserved.</span>
-        <a href="#" class="back-to-top">Back to top <i class="fa-solid fa-angle-up"></i></a>
-    </div>
-
-</body>
-</html>
+            <li><a href="Conferences
