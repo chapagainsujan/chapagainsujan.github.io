@@ -6,26 +6,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Publications | Sujan Chapagain</title>
-
 <meta name="description" content="Sujan Chapagain - Agricultural Researcher | Agronomy, Plant Pathology and Plant Breeding">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Keep your original stylesheet to preserve your website design -->
 <link rel="stylesheet" href="style.css">
 
 <style>
-/* Minimal additions for the text-only publication list */
+/* Center the main content and leave balanced side margins */
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 42px 45px 65px;
+}
 
+/* Page heading */
+.page-header {
+  margin-bottom: 22px;
+}
+
+.page-header .title {
+  margin-bottom: 5px;
+}
+
+/* Links to academic profiles */
+.note {
+  margin: 20px 0 38px;
+  line-height: 1.8;
+}
+
+/* Publication section */
+.publication-section {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.publication-section h2 {
+  margin-bottom: 22px;
+}
+
+/* Readable reference list */
 .publication-list {
-  padding-left: 28px;
   margin: 0;
+  padding-left: 30px;
+  max-width: 100%;
 }
 
 .publication-list li {
   padding-left: 8px;
-  margin-bottom: 24px;
-  line-height: inherit;
+  margin-bottom: 25px;
+  line-height: 1.85;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .publication-list li::marker {
@@ -41,10 +73,12 @@
   margin-right: 5px;
 }
 
+/* Manuscript footnote */
 .publication-footnote {
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid #ddd;
+  line-height: 1.8;
   font-size: 0.9em;
 }
 
@@ -52,9 +86,25 @@
   margin-right: 6px;
 }
 
+/* Responsive spacing */
+@media (max-width: 850px) {
+  main {
+    padding: 32px 28px 50px;
+  }
+}
+
 @media (max-width: 600px) {
+  main {
+    padding: 28px 20px 45px;
+  }
+
   .publication-list {
-    padding-left: 23px;
+    padding-left: 24px;
+  }
+
+  .publication-list li {
+    padding-left: 4px;
+    margin-bottom: 22px;
   }
 }
 </style>
@@ -69,13 +119,14 @@
       Sujan Chapagain | Academic Portfolio
     </a>
 
-    <button class="menu-toggle" aria-label="Toggle menu"
+    <button class="menu-toggle"
+      type="button"
+      aria-label="Toggle menu"
       aria-expanded="false">
       <i class="fa-solid fa-bars"></i>
     </button>
 
     <ul class="nav-left">
-
       <li>
         <button class="nav-link caret" type="button">About</button>
         <ul class="dropdown-menu">
@@ -94,18 +145,11 @@
         </ul>
       </li>
 
-      <li>
-        <a class="nav-link" href="teaching.html">Teaching</a>
-      </li>
-
-      <li>
-        <a class="nav-link" href="blogs.html">Blogs</a>
-      </li>
-
+      <li><a class="nav-link" href="teaching.html">Teaching</a></li>
+      <li><a class="nav-link" href="blogs.html">Blogs</a></li>
     </ul>
 
     <div class="nav-right">
-
       <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
 
       <a href="https://github.com/chapagainsujan"
@@ -122,8 +166,8 @@
          target="_blank" rel="noopener" aria-label="LinkedIn">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
-
     </div>
+
   </div>
 </header>
 
@@ -224,7 +268,6 @@
     </div>
 
     <div class="footer-icons">
-
       <a href="https://github.com/chapagainsujan"
          target="_blank" rel="noopener" aria-label="GitHub">
         <i class="fa-brands fa-github"></i>
@@ -239,28 +282,16 @@
          target="_blank" rel="noopener" aria-label="LinkedIn">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
-
     </div>
+
   </div>
 </footer>
 
 <script src="script.js"></script>
 
 <script>
-/* Update copyright year */
 document.getElementById('year').textContent =
   new Date().getFullYear();
-
-/* Mobile navigation fallback */
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-left');
-
-if (menuToggle && navMenu) {
-  menuToggle.addEventListener('click', function () {
-    const expanded = navMenu.classList.toggle('show');
-    menuToggle.setAttribute('aria-expanded', expanded);
-  });
-}
 </script>
 
 </body>
