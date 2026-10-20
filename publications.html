@@ -2,313 +2,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Publications | Sujan Chapagain</title>
-<meta name="description" content="Academic publications by Sujan Chapagain in agronomy, crop physiology, plant breeding, and plant pathology.">
+
+<meta name="description" content="Sujan Chapagain - Agricultural Researcher | Agronomy, Plant Pathology and Plant Breeding">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Keep your original stylesheet to preserve your website design -->
+<link rel="stylesheet" href="style.css">
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #262626;
-  background: #fff;
-  line-height: 1.75;
-}
-
-a {
-  color: #315b78;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Navigation */
-.navbar {
-  border-bottom: 1px solid #e5e5e5;
-  background: #fff;
-}
-
-.navbar-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 18px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
-.brand {
-  color: #222;
-  font-size: 16px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.nav-left,
-.dropdown-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.nav-left > li {
-  position: relative;
-}
-
-.nav-link {
-  font: inherit;
-  font-size: 14px;
-  color: #333;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px 0;
-}
-
-.nav-link.active {
-  font-weight: 600;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 175px;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  z-index: 10;
-  padding: 7px 0;
-}
-
-.nav-left li:hover > .dropdown-menu,
-.nav-left li:focus-within > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 6px 14px;
-  color: #333;
-  font-size: 14px;
-}
-
-.dropdown-menu a:hover {
-  background: #f6f6f6;
-  text-decoration: none;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 13px;
-}
-
-.nav-right .cv {
-  border: 1px solid #ccc;
-  padding: 3px 11px;
-}
-
-.menu-toggle {
-  display: none;
-  border: 0;
-  background: none;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* Main content */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 45px 25px 65px;
-}
-
-.page-header {
-  margin-bottom: 20px;
-}
-
-.title {
-  font-size: 32px;
-  line-height: 1.3;
-  font-weight: 600;
-  margin: 0 0 5px;
-}
-
-.subtitle {
-  font-size: 15px;
-  color: #666;
-  margin: 0;
-}
-
-.note {
-  font-size: 14px;
-  color: #555;
-  margin: 22px 0 38px;
-}
-
-/* Publication list */
-.publication-section {
-  margin-top: 35px;
-}
-
-.publication-section h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0 0 22px;
-  padding-bottom: 9px;
-  border-bottom: 1px solid #ddd;
-}
+/* Minimal additions for the text-only publication list */
 
 .publication-list {
+  padding-left: 28px;
   margin: 0;
-  padding-left: 30px;
 }
 
 .publication-list li {
-  padding-left: 7px;
-  margin-bottom: 25px;
-  font-size: 15px;
-  line-height: 1.85;
+  padding-left: 8px;
+  margin-bottom: 24px;
+  line-height: inherit;
 }
 
 .publication-list li::marker {
-  color: #555;
   font-weight: 600;
 }
 
-.publication-title {
-  font-weight: 400;
-}
-
-.publication-list em {
-  font-style: italic;
-}
-
-.doi {
+.publication-doi {
   display: block;
-  margin-top: 3px;
-  font-size: 14px;
-  overflow-wrap: anywhere;
+  margin-top: 4px;
 }
 
-/* Status footnote */
-.publication-footnote {
-  margin: 8px 0 0;
-  padding: 13px 15px;
-  border-top: 1px solid #e5e5e5;
-  color: #666;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.footnote-icon {
-  display: inline-block;
+.publication-doi i {
   margin-right: 5px;
-  color: #777;
 }
 
-/* Footer */
-footer {
-  border-top: 1px solid #e5e5e5;
+.publication-footnote {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
 }
 
-.footer-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 22px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  color: #666;
-  font-size: 13px;
+.publication-footnote i {
+  margin-right: 6px;
 }
 
-.footer-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 850px) {
-  .navbar-inner {
-    gap: 14px;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  .nav-left {
-    display: none;
-    width: 100%;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-left.show {
-    display: flex;
-  }
-
-  .dropdown-menu {
-    position: static;
-    border: none;
-    padding-left: 15px;
-  }
-
-  .nav-right {
-    width: 100%;
-  }
-
-  main {
-    padding: 32px 20px 50px;
-  }
-
-  .title {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  .brand {
-    font-size: 14px;
-  }
-
+@media (max-width: 600px) {
   .publication-list {
-    padding-left: 24px;
-  }
-
-  .publication-list li {
-    font-size: 14px;
-    padding-left: 4px;
-  }
-
-  .footer-inner {
-    align-items: flex-start;
-    flex-direction: column;
+    padding-left: 23px;
   }
 }
 </style>
@@ -323,16 +69,15 @@ footer {
       Sujan Chapagain | Academic Portfolio
     </a>
 
-    <button class="menu-toggle"
-      type="button"
-      aria-label="Toggle navigation"
+    <button class="menu-toggle" aria-label="Toggle menu"
       aria-expanded="false">
-      ☰
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <ul class="nav-left">
+
       <li>
-        <button class="nav-link" type="button">About</button>
+        <button class="nav-link caret" type="button">About</button>
         <ul class="dropdown-menu">
           <li><a href="index.html">About me</a></li>
           <li><a href="news.html">News</a></li>
@@ -341,7 +86,7 @@ footer {
       </li>
 
       <li>
-        <button class="nav-link active" type="button">Research</button>
+        <button class="nav-link caret active" type="button">Research</button>
         <ul class="dropdown-menu">
           <li><a href="projects.html">Projects &amp; Grants</a></li>
           <li><a href="publications.html">Publications</a></li>
@@ -349,23 +94,36 @@ footer {
         </ul>
       </li>
 
-      <li><a class="nav-link" href="teaching.html">Teaching</a></li>
-      <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+      <li>
+        <a class="nav-link" href="teaching.html">Teaching</a>
+      </li>
+
+      <li>
+        <a class="nav-link" href="blogs.html">Blogs</a>
+      </li>
+
     </ul>
 
     <div class="nav-right">
+
       <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
 
       <a href="https://github.com/chapagainsujan"
-         target="_blank" rel="noopener">GitHub</a>
+         target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
 
       <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&amp;hl=en"
-         target="_blank" rel="noopener">Google Scholar</a>
+         target="_blank" rel="noopener" aria-label="Google Scholar">
+        <i class="fa-brands fa-google-scholar"></i>
+      </a>
 
       <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/"
-         target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+         target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
 
+    </div>
   </div>
 </header>
 
@@ -377,16 +135,17 @@ footer {
   </div>
 
   <p class="note">
-    Full publication record:
+    Full list on
     <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&amp;hl=en"
-       target="_blank" rel="noopener">Google Scholar</a> |
+       target="_blank" rel="noopener">Google Scholar</a>,
     <a href="https://orcid.org/0000-0002-2037-3491"
-       target="_blank" rel="noopener">ORCID</a> |
+       target="_blank" rel="noopener">ORCID</a> and
     <a href="https://www.researchgate.net/profile/Sujan-Chapagain-2"
-       target="_blank" rel="noopener">ResearchGate</a>
+       target="_blank" rel="noopener">ResearchGate</a>.
   </p>
 
   <section class="publication-section">
+
     <h2>Published Articles</h2>
 
     <ol class="publication-list">
@@ -394,70 +153,63 @@ footer {
       <li>
         <strong>Chapagain, S.</strong>, Kandel, B. P., Shrestha, S.,
         et al. (2026).
-        <span class="publication-title">
-          Screening drought tolerance capacity in wheat genotypes using
-          physiological traits and drought tolerance indices in the
-          mid-hills of Nepal.
-        </span>
+        Screening drought tolerance capacity in wheat genotypes using
+        physiological traits and drought tolerance indices in the
+        mid-hills of Nepal.
         <em>Advances in Agriculture.</em>
-        <a class="doi"
+
+        <a class="publication-doi"
            href="https://doi.org/10.1155/aia/4020245"
            target="_blank" rel="noopener">
-          <span aria-hidden="true">↗</span>
-          DOI: 10.1155/aia/4020245
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          DOI
         </a>
       </li>
 
       <li>
         <strong>Chapagain, S.</strong>, Shrestha, S., Kandel, B. P.,
         Rana, D., &amp; Poudel, A. (2026).
-        <span class="publication-title">
-          Characterization of phenotypic diversity and trait associations
-          in Nepalese finger millet landraces.
-        </span>
+        Characterization of phenotypic diversity and trait associations
+        in Nepalese finger millet landraces.
         <em>CABI Agriculture and Bioscience, 7</em>(1).
-        <a class="doi"
+
+        <a class="publication-doi"
            href="https://doi.org/10.1079/ab.2026.0044"
            target="_blank" rel="noopener">
-          <span aria-hidden="true">↗</span>
-          DOI: 10.1079/ab.2026.0044
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          DOI
         </a>
       </li>
 
       <li>
         <strong>Chapagain, S.</strong>, Kandel, B. P., Shrestha, S.,
         et al. (2026).
-        <span class="publication-title">
-          Deciphering genetic variability and trait associations in
-          Nepalese finger millet landraces for yield improvement.
-        </span>
+        Deciphering genetic variability and trait associations in
+        Nepalese finger millet landraces for yield improvement.
         <em>Discover Agriculture, 4</em>, 130.
-        <a class="doi"
+
+        <a class="publication-doi"
            href="https://doi.org/10.1007/s44279-026-00587-3"
            target="_blank" rel="noopener">
-          <span aria-hidden="true">↗</span>
-          DOI: 10.1007/s44279-026-00587-3
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          DOI
         </a>
       </li>
 
       <li>
         <strong>Chapagain, S.</strong>, Shrestha, S., Kandel, B. P.,
         &amp; Rana, D.
-        <span class="publication-title">
-          Integrating NDVI and Canopy Temperature Across Phenological
-          Stages for Drought Phenotyping and Grain Yield Prediction.
-        </span>
-        <em>Manuscript under second revision.</em>
-        <sup title="Manuscript under revision">*</sup>
+        Integrating NDVI and Canopy Temperature Across Phenological
+        Stages for Drought Phenotyping and Grain Yield Prediction.
+        <em>Manuscript under second revision.</em><sup>*</sup>
       </li>
 
     </ol>
 
     <p class="publication-footnote">
-      <span class="footnote-icon" aria-hidden="true">ⓘ</span>
-      <strong>Note:</strong>
-      <sup>*</sup> Manuscript currently under second revision; not yet
-      accepted for publication.
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      <sup>*</sup>
+      Manuscript under second revision; not yet accepted for publication.
     </p>
 
   </section>
@@ -468,35 +220,47 @@ footer {
   <div class="footer-inner">
 
     <div>
-      Sujan Chapagain &copy;
-      <span id="year">2026</span>
+      Sujan Chapagain &copy; <span id="year">2026</span>
     </div>
 
     <div class="footer-icons">
+
       <a href="https://github.com/chapagainsujan"
-         target="_blank" rel="noopener">GitHub</a>
+         target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
 
       <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&amp;hl=en"
-         target="_blank" rel="noopener">Google Scholar</a>
+         target="_blank" rel="noopener" aria-label="Google Scholar">
+        <i class="fa-brands fa-google-scholar"></i>
+      </a>
 
       <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/"
-         target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+         target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
 
+    </div>
   </div>
 </footer>
 
+<script src="script.js"></script>
+
 <script>
+/* Update copyright year */
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+/* Mobile navigation fallback */
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-left');
 
-menuToggle.addEventListener('click', function () {
-  const isOpen = navMenu.classList.toggle('show');
-  menuToggle.setAttribute('aria-expanded', isOpen);
-});
-
-document.getElementById('year').textContent =
-  new Date().getFullYear();
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener('click', function () {
+    const expanded = navMenu.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', expanded);
+  });
+}
 </script>
 
 </body>
