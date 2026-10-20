@@ -318,11 +318,11 @@ h3 {
   margin: .6rem 0 1.2rem; 
 }
 
-/* ===== Quarto Style Cards (Recent Posts Grid) ===== */
+/* ===== Quarto Style Cards (Recent Posts Grid - 3 Columns Filled) ===== */
 .cards { 
   display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-  gap: 1.2rem; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem; 
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
 }
@@ -760,6 +760,10 @@ footer {
 
   .about-main { 
     padding: 1.5rem 0 0; 
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
   }
 
   .post, .course, .org, .contact-grid, .blog-item { 
