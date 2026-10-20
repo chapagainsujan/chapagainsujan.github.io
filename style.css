@@ -11,10 +11,10 @@
   --maxw: 1280px;
 }
 
-/* Global Reset & Base Elements */
+/* Global Reset & Base Elements (Sharp corners everywhere) */
 *, *::before, *::after { 
   box-sizing: border-box; 
-  border-radius: 0 !important; /* Forces clean, sharp academic borders throughout */
+  border-radius: 0 !important; 
 }
 
 html { 
@@ -62,7 +62,7 @@ h1, h2, h3, h4,
   letter-spacing: -0.01em;
 }
 
-/* Header & Navigation Bar */
+/* Header & Navigation Bar with Hover Dropdown */
 .navbar { 
   background: var(--light); 
   border-bottom: 1px solid #e9ecef; 
@@ -123,6 +123,11 @@ h1, h2, h3, h4,
   color: #000; 
 }
 
+/* Hover Slide-Down Dropdown Menu */
+.nav-left > li:hover > .dropdown-menu {
+  display: block;
+}
+
 .caret::after { 
   content: ""; 
   display: inline-block; 
@@ -144,6 +149,7 @@ h1, h2, h3, h4,
   padding: .4rem 0; 
   list-style: none; 
   margin: 0; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .dropdown-menu a { 
@@ -156,10 +162,6 @@ h1, h2, h3, h4,
 
 .dropdown-menu a:hover { 
   background: var(--light); 
-}
-
-li.open > .dropdown-menu { 
-  display: block; 
 }
 
 .nav-right a { 
@@ -186,7 +188,7 @@ li.open > .dropdown-menu {
   cursor: pointer; 
 }
 
-/* Page Container Layout */
+/* Main Container */
 main { 
   flex: 1; 
   width: 100%; 
@@ -224,7 +226,7 @@ h3 {
   border-bottom: 1px solid var(--border); 
 }
 
-/* Profile / Bio Section Layout */
+/* About / Bio Section Layout */
 .about { 
   display: grid; 
   grid-template-columns: 5fr 7fr; 
@@ -303,7 +305,7 @@ h3 {
   margin: .3rem 0; 
 }
 
-/* Section Headings */
+/* Section Headings & Lead */
 .section-title { 
   font-size: 1.9rem; 
   font-weight: 600; 
@@ -316,371 +318,54 @@ h3 {
   margin: .6rem 0 1.2rem; 
 }
 
-/* Latest News Grid (Card Layout) */
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-}
-
-.news-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  overflow: hidden;
+/* Vertical News Section Layout */
+.news-vertical-list {
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.news-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.news-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+.news-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
   border-bottom: 1px solid var(--border);
+  align-items: start;
 }
 
-.news-card-body {
-  padding: 1rem;
-  flex-grow: 1;
+.news-row:first-child {
+  border-top: 1px solid var(--border);
 }
 
-.news-card-body .card-title {
+.news-row-date {
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding-top: 0.1rem;
+}
+
+.news-row-content h3 {
   font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.3;
+  margin: 0 0 0.3rem 0;
 }
 
-.news-card-body .card-title a {
+.news-row-content h3 a {
   color: var(--text);
   text-decoration: none;
 }
 
-.news-card-body .card-title a:hover {
+.news-row-content h3 a:hover {
   color: var(--link);
 }
 
-.news-card-body p {
-  font-size: 0.95rem;
-  color: #495057;
+.news-row-content p {
   margin: 0;
-  line-height: 1.45;
-}
-
-.news-card-footer {
-  padding: 0.6rem 1rem;
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-align: right;
-  border-top: 1px solid var(--border);
-  background: var(--light);
+  font-size: 0.98rem;
+  color: #555;
 }
 
 .right { 
   text-align: right; 
   margin-top: 1rem; 
-}
-
-/* Filters & Chips */
-.filter-bar { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: .5rem; 
-  margin-bottom: 1.5rem; 
-}
-
-.chip { 
-  border: 1px solid var(--border); 
-  background: #fff; 
-  padding: .15rem .8rem; 
-  font-size: .95rem; 
-  cursor: pointer; 
-  color: var(--text); 
-  font-family: inherit; 
-}
-
-.chip.on { 
-  background: var(--primary); 
-  border-color: var(--primary); 
-  color: #fff; 
-}
-
-/* Publications, Posts & Blogs List */
-.post { 
-  display: grid; 
-  grid-template-columns: 1fr 180px; 
-  gap: 1.2rem; 
-  padding: 1.2rem 0; 
-  border-bottom: 1px solid var(--border); 
-}
-
-.post h3 { 
-  margin: 0 0 .3rem; 
-  font-size: 1.5rem; 
-}
-
-.post h3 a { 
-  text-decoration: none; 
-}
-
-.post .meta { 
-  color: var(--muted); 
-  font-size: .95rem; 
-}
-
-.post img { 
-  width: 100%; 
-  height: 120px; 
-  object-fit: cover; 
-}
-
-.tag { 
-  display: inline-block; 
-  background: var(--light); 
-  border: 1px solid var(--border); 
-  padding: 0 .5rem; 
-  margin-bottom: .3rem; 
-  font-size: .8rem; 
-  color: #495057; 
-  text-transform: uppercase; 
-  letter-spacing: .05em; 
-}
-
-.note { 
-  color: #495057; 
-  font-size: .98rem; 
-}
-
-.pub-item { 
-  margin-bottom: .5rem; 
-}
-
-.pub-citation { 
-  margin: 0 0 .3rem; 
-  line-height: 1.55; 
-}
-
-.pub-title { 
-  font-weight: 600; 
-}
-
-.pub-links { 
-  margin: .2rem 0 .4rem; 
-}
-
-.pub-btn { 
-  display: inline-block; 
-  padding: 0 .55rem; 
-  margin-right: .3rem; 
-  font-size: .85rem; 
-  border: 1px solid var(--border); 
-  text-decoration: none; 
-  color: #495057; 
-  background: var(--light); 
-}
-
-.pub-btn:hover { 
-  background: var(--primary); 
-  color: #fff; 
-  border-color: var(--primary); 
-}
-
-hr.pub-divider { 
-  width: 90%; 
-  margin: .75rem 0; 
-  border: 0; 
-  border-top: 1px solid var(--border); 
-}
-
-/* Tables */
-table { 
-  border-collapse: collapse; 
-  width: 100%; 
-  font-size: 1rem; 
-}
-
-th, td { 
-  padding: .6rem .7rem; 
-  text-align: left; 
-  border-bottom: 1px solid var(--border); 
-  vertical-align: top; 
-}
-
-th { 
-  border-bottom: 2px solid #212529; 
-  font-weight: 600; 
-}
-
-tbody tr:hover { 
-  background: #fafafa; 
-}
-
-/* Teaching & Affiliations */
-.course { 
-  display: grid; 
-  grid-template-columns: 1fr 5fr; 
-  gap: 1.2rem; 
-  align-items: start; 
-  margin-bottom: 1.5rem; 
-}
-
-.org { 
-  display: grid; 
-  grid-template-columns: 80px 1fr; 
-  gap: 1.2rem; 
-  border: 1px solid var(--border); 
-  padding: 1.3rem; 
-  margin-bottom: 1.1rem; 
-  background: #fff; 
-}
-
-.org-number { 
-  font-size: 2.6rem; 
-  font-weight: 700; 
-  color: #ced4da; 
-  line-height: 1; 
-  font-family: "EB Garamond", Garamond, Georgia, serif; 
-}
-
-.org-title { 
-  font-size: 1.45rem; 
-  margin: 0 0 .5rem; 
-  padding: 0; 
-  border: 0; 
-}
-
-.role-list { 
-  margin: 0; 
-  padding-left: 1.2rem; 
-}
-
-.role-list li { 
-  margin: .3rem 0; 
-}
-
-/* People / Team */
-.people-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
-  gap: 1.4rem; 
-}
-
-.person { 
-  text-align: center; 
-}
-
-.person img { 
-  width: 100%; 
-  height: 200px; 
-  object-fit: cover; 
-}
-
-.person .name { 
-  font-weight: 600; 
-  font-size: 1.2rem; 
-  margin-top: .5rem; 
-}
-
-.person .role { 
-  color: var(--muted); 
-}
-
-/* Contact Grid */
-.contact { 
-  text-align: center; 
-  font-size: 1.2rem; 
-}
-
-.contact p { 
-  margin: .8rem 0; 
-}
-
-.contact-grid { 
-  display: grid; 
-  grid-template-columns: 1fr 1.3fr; 
-  gap: 3.5rem; 
-}
-
-.contact-grid h2 { 
-  margin-top: 0; 
-}
-
-.detail { 
-  margin: 0 0 1.1rem; 
-}
-
-.detail .label { 
-  display: block; 
-  color: var(--muted); 
-  font-size: .85rem; 
-  text-transform: uppercase; 
-  letter-spacing: .07em; 
-  font-weight: 600; 
-}
-
-.link-rows { 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-}
-
-.link-rows li { 
-  display: grid; 
-  grid-template-columns: 34px 150px 1fr; 
-  gap: .8rem; 
-  align-items: center; 
-  padding: .7rem 0; 
-  border-bottom: 1px solid var(--border); 
-}
-
-.link-rows li:first-child { 
-  border-top: 1px solid var(--border); 
-}
-
-.link-rows i { 
-  font-size: 1.15rem; 
-  color: #495057; 
-  text-align: center; 
-}
-
-.link-rows .name { 
-  font-weight: 600; 
-}
-
-/* Blog Items */
-.blog-item { 
-  display: grid; 
-  grid-template-columns: 1fr 240px; 
-  gap: 1.6rem; 
-  padding: 1.2rem 0; 
-  border-bottom: 1px solid var(--border); 
-}
-
-.blog-item img { 
-  width: 100%; 
-  height: 150px; 
-  object-fit: cover; 
-}
-
-.meta { 
-  color: var(--muted); 
-  font-size: .95rem; 
-}
-
-/* Icon Tweaks */
-.btn-outline i, .pub-btn i { 
-  font-size: .95em; 
-}
-
-.nav-right a i { 
-  font-size: 1.1rem; 
 }
 
 /* Footer Section */
@@ -716,7 +401,7 @@ footer {
   color: #6c757d; 
 }
 
-/* Responsive Styles for Mobile & Tablets */
+/* Responsive Media Queries */
 @media (max-width: 860px) {
   .menu-toggle { 
     display: block; 
@@ -760,28 +445,8 @@ footer {
     padding: 1.5rem 0 0; 
   }
 
-  .post { 
-    grid-template-columns: 1fr; 
-  }
-
-  .course { 
-    grid-template-columns: 1fr; 
-  }
-
-  .news-item, .publication-card, .org, .contact-grid, .blog-item { 
-    grid-template-columns: 1fr; 
-    gap: .8rem; 
-  }
-
-  .pub-image { 
-    max-width: 280px; 
-  }
-
-  .link-rows li { 
-    grid-template-columns: 34px 1fr; 
-  }
-
-  .link-rows .handle { 
-    grid-column: 2; 
+  .news-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
   }
 }
