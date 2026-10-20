@@ -411,14 +411,14 @@ h3 {
 .post { 
   display: grid; 
   grid-template-columns: 1fr 180px; 
-  gap: 1.3rem; 
+  gap: 1.2rem; 
   padding: 1.2rem 0; 
   border-bottom: 1px solid var(--border); 
 }
 
 .post h3 { 
   margin: 0 0 .3rem; 
-  font-size: 1.6rem; 
+  font-size: 1.5rem; 
 }
 
 .post h3 a { 
@@ -431,7 +431,7 @@ h3 {
 }
 
 .post img { 
-  width: 140%; 
+  width: 100%; 
   height: 120px; 
   object-fit: cover; 
 }
