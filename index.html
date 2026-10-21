@@ -8,30 +8,51 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <style>
-  /* Search input styling in navbar */
-  .nav-search {
+  /* Navigation Bar Alignment */
+  .navbar-inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* Right-aligned Search Input matching image design */
+  .nav-search {
     position: relative;
-    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
   }
+
   .nav-search input {
-    padding: 6px 12px 6px 30px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+    width: 170px;
+    height: 32px;
+    padding: 4px 10px 4px 30px;
     font-size: 0.9rem;
+    color: #333;
+    background-color: #ffffff;
+    border: 1.5px solid #a4b3ca; /* Soft outline matching screenshot */
+    border-radius: 6px;         /* Standard rounded rectangle */
     outline: none;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
+
   .nav-search input:focus {
-    border-color: #2e7d32;
-    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+    border-color: #5c93e6;
+    box-shadow: 0 0 0 2px rgba(92, 147, 230, 0.25);
   }
+
   .nav-search .search-icon {
     position: absolute;
-    left: 10px;
-    color: #777;
+    left: 9px;
+    color: #8c98a9;
     font-size: 0.85rem;
+    pointer-events: none;
   }
 
   /* Profile circular frame */
@@ -77,17 +98,18 @@
       <li><a class="nav-link" href="blogs.html">Blogs</a></li>
     </ul>
 
-    <!-- Search Box in Navbar -->
-    <div class="nav-search">
-      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-      <input type="text" placeholder="Search..." aria-label="Search site">
-    </div>
-
+    <!-- Right-aligned section with social links and search box -->
     <div class="nav-right">
       <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
       <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
       <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      
+      <!-- Search Box on the Far Right -->
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="" aria-label="Search site">
+      </div>
     </div>
   </div>
 </header>
