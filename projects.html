@@ -3,15 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects & Grants | Sujan Chapagain</title>
+<title>Projects &amp; Grants | Sujan Chapagain</title>
 <meta name="description" content="Sujan Chapagain - Agricultural Researcher | Agronomy, Plant Pathology and Plant Breeding">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Navigation Bar Layout & Search Styling */
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+  }
+
+  .nav-search input {
+    width: 170px;
+    height: 32px;
+    padding: 4px 10px 4px 30px;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #ffffff;
+    border: 1.5px solid #a4b3ca;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-search input:focus {
+    border-color: #5c93e6;
+    box-shadow: 0 0 0 2px rgba(92, 147, 230, 0.25);
+  }
+
+  .nav-search .search-icon {
+    position: absolute;
+    left: 9px;
+    color: #8c98a9;
+    font-size: 0.85rem;
+    pointer-events: none;
+  }
+
+  /* Centered Page Layout */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .projects-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .project-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 24px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin: 0;
+  }
+
+  .grant-badge {
+    background-color: #eef2ff;
+    color: #3730a3;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid #c7d2fe;
+  }
+
+  .project-meta {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 12px;
+  }
+
+  .project-meta span {
+    margin-right: 15px;
+  }
+
+  .project-details {
+    text-align: justify;
+    line-height: 1.6;
+    color: #334155;
+    font-size: 0.95rem;
+  }
+
+  .project-details ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+  }
+
+  .project-details li {
+    margin-bottom: 5px;
+  }
+</style>
 </head>
 <body>
 <header class="navbar">
   <div class="navbar-inner">
-    <a class="brand" href="index.html">Sujan Chapagain </a>
+    <a class="brand" href="index.html">Sujan Chapagain</a>
     <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-left">
       <li><button class="nav-link caret">About</button>
@@ -19,33 +145,98 @@
           <li><a href="index.html">About me</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="contact.html">Contact</a></li>
-        </ul></li>
+        </ul>
+      </li>
       <li><button class="nav-link caret active">Research</button>
         <ul class="dropdown-menu">
           <li><a href="projects.html">Projects &amp; Grants</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="affiliations.html">Affiliations</a></li>
-        </ul></li>
+        </ul>
+      </li>
       <li><a class="nav-link" href="teaching.html">Teaching</a></li>
       <li><a class="nav-link" href="blogs.html">Blogs</a></li>
     </ul>
+
+    <!-- Right Section with Links & Search Bar -->
     <div class="nav-right">
       <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
       <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
       <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      
+      <!-- Right-Aligned Search Bar -->
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="" aria-label="Search site">
+      </div>
     </div>
   </div>
 </header>
 
 <main>
-<div class="page-header"><h1 class="title">Projects &amp; Grants</h1><p class="subtitle">Research projects and funding</p></div><table>
-  <thead><tr><th>Project</th><th>Role</th><th>Funder</th><th>Years</th></tr></thead>
-  <tbody>
-    <tr><td colspan="4"><div class="empty">No projects added yet. Add a row for each project: title, your role, funder and years.</div></td></tr>
-    <!-- <tr><td>Project title</td><td>Researcher</td><td>Funder</td><td>2025&ndash;2026</td></tr> -->
-  </tbody>
-</table>
+  <div class="page-header">
+    <h1 class="title">Projects &amp; Grants</h1>
+    <p class="subtitle">Research projects and funding</p>
+  </div>
+
+  <div class="projects-container">
+    
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">Screening Leaf Rust Resistance and High-Throughput Assessment of NDVI &amp; Canopy Temperature in Wheat Genotypes</h3>
+        <span class="grant-badge">NPR 300,000 / USD 2,196.76</span>
+      </div>
+      <div class="project-meta">
+        <span><i class="fa-solid fa-user-gear"></i> <strong>Role:</strong> Principal Investigator</span>
+        <span><i class="fa-solid fa-building-columns"></i> <strong>Funder:</strong> Champa Devi Rural Municipality</span>
+        <span><i class="fa-regular fa-clock"></i> <strong>Duration:</strong> 1 Year</span>
+      </div>
+      <div class="project-details">
+        <p><strong>Project Title:</strong> Agriculture Research Mini Grant — Screening leaf rust resistance and high-throughput assessment of NDVI and canopy temperature in wheat genotypes.</p>
+        <ul>
+          <li><strong>Principal Investigator:</strong> Sujan Chapagain</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">In Vivo Efficacy of Botanical Extracts Against <em>Penicillium digitatum</em> (Pers.: Fr.) Sacc.</h3>
+      </div>
+      <div class="project-meta">
+        <span><i class="fa-solid fa-user-gear"></i> <strong>Role:</strong> Principal Investigator</span>
+      </div>
+      <div class="project-details">
+        <p>Evaluation of botanical extracts for eco-friendly postharvest disease management against green mould (<em>Penicillium digitatum</em>) in citrus fruits.</p>
+        <ul>
+          <li><strong>Principal Investigator:</strong> Sujan Chapagain</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">Screening Wheat Genotypes Against Leaf Rust (<em>Puccinia triticina</em>) in Open Field Conditions</h3>
+      </div>
+      <div class="project-meta">
+        <span><i class="fa-solid fa-user-gear"></i> <strong>Role:</strong> Principal Investigator</span>
+        <span><i class="fa-solid fa-microscope"></i> <strong>Target Pathogen:</strong> <em>Puccinia triticina</em> Erikss.</span>
+      </div>
+      <div class="project-details">
+        <p>Evaluation of leaf rust pustule severity and response scoring under open field conditions to identify resistant genotypes.</p>
+        <ul>
+          <li><strong>Principal Investigator:</strong> Sujan Chapagain</li>
+          <li><strong>Co-Researchers:</strong> Research Team &amp; Plant Pathology Collaborators</li>
+          <li><strong>Publication Status:</strong> Under Revision &mdash; <em>Australasian Plant Pathology</em></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </main>
 
 <footer>
