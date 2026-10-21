@@ -6,9 +6,10 @@
 <title>About | Sujan Chapagain</title>
 <meta name="description" content="Sujan Chapagain - Agricultural Researcher | Agronomy, Plant Pathology and Plant Breeding">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 <style>
-  /* Global Styles & Reset */
+  /* Base & Typography using Garamond */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -16,14 +17,15 @@
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: #333;
-    background-color: #fcfcfc;
-    line-height: 1.6;
+    font-family: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.7;
+    font-size: 1.125rem;
   }
 
   a {
-    color: #0066cc;
+    color: #0969da;
     text-decoration: none;
   }
 
@@ -31,10 +33,12 @@
     text-decoration: underline;
   }
 
-  /* Header & Navigation Bar */
+  /* Navigation Bar with Blur Effect */
   .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eaeaea;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -46,15 +50,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 14px 20px;
   }
 
   .brand {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #111;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 
   .menu-toggle {
@@ -76,20 +80,20 @@
     position: relative;
   }
 
-  .nav-link {
+  .nav-link, .nav-left button {
     background: none;
     border: none;
-    font-size: 0.95rem;
-    color: #555;
+    font-family: inherit;
+    font-size: 1.05rem;
+    color: #444;
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 4px 6px;
     text-decoration: none;
     display: inline-block;
   }
 
   .nav-link:hover, .nav-link.active {
     color: #000;
-    font-weight: 500;
   }
 
   /* Dropdown Menu */
@@ -99,12 +103,12 @@
     top: 100%;
     left: 0;
     background-color: #ffffff;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     list-style: none;
-    min-width: 160px;
-    padding: 8px 0;
+    min-width: 150px;
+    padding: 6px 0;
     z-index: 10;
   }
 
@@ -114,13 +118,13 @@
 
   .dropdown-menu a {
     display: block;
-    padding: 6px 16px;
-    color: #444;
-    font-size: 0.9rem;
+    padding: 6px 14px;
+    color: #333;
+    font-size: 1rem;
   }
 
   .dropdown-menu a:hover {
-    background-color: #f5f5f5;
+    background-color: #f6f8fa;
     text-decoration: none;
   }
 
@@ -128,14 +132,12 @@
   .nav-right {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-left: auto;
+    gap: 16px;
   }
 
   .nav-right a {
-    color: #555;
+    color: #444;
     font-size: 1.1rem;
-    transition: color 0.2s;
   }
 
   .nav-right a:hover {
@@ -143,45 +145,45 @@
   }
 
   .nav-right .cv {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
   }
 
-  /* Quarto-style Search Box */
+  /* Search Box Matching Your Design */
   .nav-search {
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 4px;
   }
 
   .nav-search .search-icon {
     position: absolute;
     left: 10px;
-    color: #888888;
+    color: #666;
     font-size: 13px;
     pointer-events: none;
   }
 
   .nav-search input {
-    width: 140px;
-    padding: 5px 10px 5px 30px;
-    font-size: 0.85rem;
-    border: 1px solid #62a0ea; /* Quarto-style subtle outline */
-    border-radius: 6px;
+    width: 160px;
+    padding: 5px 10px 5px 32px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #79c0ff;
+    border-radius: 4px;
     outline: none;
-    background-color: #ffffff;
-    color: #333333;
-    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    color: #222;
+    transition: all 0.2s ease;
   }
 
   .nav-search input:focus {
-    border-color: #3584e4;
-    box-shadow: 0 0 0 3px rgba(53, 132, 228, 0.15);
-    width: 170px;
+    border-color: #0969da;
+    box-shadow: 0 0 3px rgba(9, 105, 218, 0.3);
+    width: 190px;
   }
 
-  /* Main Container */
+  /* Main Layout & Justified Text */
   main {
     max-width: 1000px;
     margin: 40px auto;
@@ -195,14 +197,14 @@
   }
 
   .about-side {
-    width: 250px;
+    width: 240px;
     flex-shrink: 0;
     text-align: center;
   }
 
   .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
@@ -210,19 +212,19 @@
 
   .profile-fallback {
     display: none;
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
-    background-color: #e0e0e0;
+    background-color: #eee;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
-    color: #777;
+    font-size: 3rem;
+    color: #666;
     margin: 0 auto 15px auto;
   }
 
   .about-name {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: bold;
     margin-bottom: 15px;
   }
@@ -235,18 +237,19 @@
 
   .btn-outline {
     display: inline-block;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    color: #444;
-    font-size: 0.85rem;
+    padding: 5px 10px;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    color: #333;
+    font-size: 0.95rem;
     text-align: left;
+    background-color: #f6f8fa;
   }
 
   .btn-outline:hover {
-    background-color: #f0f0f0;
+    background-color: #eaeef2;
     text-decoration: none;
-    color: #000;
+    color: #111;
   }
 
   .btn-outline i {
@@ -258,31 +261,36 @@
   }
 
   .about-main p {
-    margin-bottom: 15px;
-    font-size: 1.05rem;
+    margin-bottom: 18px;
+    text-align: justify;
   }
 
   .about-main h2 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 4px;
   }
 
   .about-main ul {
     padding-left: 20px;
+    text-align: left;
   }
 
-  /* Recent Posts / Grid Section */
+  .about-main li {
+    margin-bottom: 10px;
+  }
+
+  /* Recent Posts Section */
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-top: 40px;
     margin-bottom: 5px;
   }
 
   .section-lead {
-    color: #666;
+    color: #555;
     margin-bottom: 25px;
   }
 
@@ -294,8 +302,8 @@
   }
 
   .card {
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
     overflow: hidden;
     background: #fff;
     display: flex;
@@ -304,12 +312,12 @@
 
   .card img {
     width: 100%;
-    height: 160px;
+    height: 150px;
     object-fit: cover;
   }
 
   .card-body {
-    padding: 15px;
+    padding: 14px;
     flex-grow: 1;
   }
 
@@ -318,19 +326,10 @@
     font-weight: 600;
   }
 
-  .card-title a {
-    color: #222;
-  }
-
-  .card-title a:hover {
-    color: #0066cc;
-  }
-
   .card-date {
-    padding: 0 15px 15px 15px;
-    font-size: 0.75rem;
-    color: #888;
-    font-weight: 600;
+    padding: 0 14px 14px 14px;
+    font-size: 0.85rem;
+    color: #666;
   }
 
   .right {
@@ -339,8 +338,8 @@
 
   /* Footer */
   footer {
-    border-top: 1px solid #e5e5e5;
-    padding: 20px 0;
+    border-top: 1px solid #eaeaea;
+    padding: 25px 0;
     margin-top: 60px;
     background: #fff;
   }
@@ -352,24 +351,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #666;
-    font-size: 0.9rem;
+    color: #555;
+    font-size: 0.95rem;
   }
 
   .footer-icons {
     display: flex;
-    gap: 12px;
+    gap: 15px;
   }
 
   .footer-icons a {
-    color: #666;
+    color: #555;
   }
 
   .footer-icons a:hover {
     color: #000;
   }
 
-  /* Responsive Adjustments */
   @media (max-width: 768px) {
     .about {
       flex-direction: column;
@@ -414,7 +412,7 @@
       <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
       <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       
-      <!-- Embedded Search Bar -->
+      <!-- Search Bar Added Here -->
       <div class="nav-search">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
         <input type="text" placeholder="" aria-label="Search">
@@ -446,16 +444,16 @@
 
     <h2>Education</h2>
     <ul>
-    <li>
-    <strong>B.S. in Agricultural Science</strong><br>
-    Institute of Agriculture and Animal Science (IAAS), Tribhuvan University, Nepal<br>
-    Best Undergraduate Student
-</li>
+      <li>
+        <strong>B.S. in Agricultural Science</strong><br>
+        Institute of Agriculture and Animal Science (IAAS), Tribhuvan University, Nepal<br>
+        Best Undergraduate Student
+      </li>
     </ul>
   </section>
 </div>
 
-<!-- Recent Posts Section (Quarto Card Grid Layout) -->
+<!-- Recent Posts Section -->
 <h2 class="section-title">Recent Posts</h2>
 <p class="section-lead">Check out the latest <a href="publications.html">Papers</a>, <a href="news.html">News</a>, <a href="projects.html">Events</a>, and <a href="news.html">More &raquo;</a></p>
 
