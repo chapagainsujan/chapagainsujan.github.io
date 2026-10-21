@@ -8,41 +8,67 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <style>
-  /* Search input styling in navbar */
+  /* Centered website layout with side margins */
+  body {
+    background-color: #f0f2f5;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  .page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  /* Search input styling in nav-right */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
   .nav-search {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 0 10px;
   }
   .nav-search input {
-    padding: 6px 12px 6px 30px;
+    padding: 6px 12px 6px 32px;
     border-radius: 20px;
     border: 1px solid #ccc;
     font-size: 0.9rem;
     outline: none;
+    width: 160px;
     transition: all 0.3s ease;
   }
   .nav-search input:focus {
     border-color: #2e7d32;
+    width: 200px;
     box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
   }
   .nav-search .search-icon {
     position: absolute;
-    left: 10px;
+    left: 11px;
     color: #777;
     font-size: 0.85rem;
   }
 
-  /* Profile circular frame */
+  /* Larger circular profile frame */
   .profile-img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 15px auto;
     display: block;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   /* Justified text for body paragraphs */
@@ -53,129 +79,133 @@
 </style>
 </head>
 <body>
-<header class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="index.html">Sujan Chapagain</a>
-    <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
-    
-    <ul class="nav-left">
-      <li><button class="nav-link caret active">About</button>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">About me</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
+
+<div class="page-wrapper">
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="index.html">Sujan Chapagain</a>
+      <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      
+      <ul class="nav-left">
+        <li><button class="nav-link caret active">About</button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">About me</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        <li><button class="nav-link caret">Research</button>
+          <ul class="dropdown-menu">
+            <li><a href="projects.html">Projects &amp; Grants</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="affiliations.html">Affiliations</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="affiliations.html">Affiliations</a></li>
+        <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+      </ul>
+
+      <!-- Right side items including CV, Social Icons, and Search Bar -->
+      <div class="nav-right">
+        <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
+        <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+        <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        
+        <div class="nav-search">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Search..." aria-label="Search site">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="about">
+      <aside class="about-side">
+        <img class="profile-img" src="Image/profile.png" alt="Sujan Chapagain"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="profile-fallback"><i class="fa-regular fa-user"></i></div>
+        <div class="about-name">Sujan Chapagain</div>
+        <div class="link-buttons">
+          <a class="btn-outline" href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          <a class="btn-outline" href="https://www.researchgate.net/profile/Sujan-Chapagain-2" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+          <a class="btn-outline" href="https://orcid.org/0000-0002-2037-3491" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i> ORCID</a>
+          <a class="btn-outline" href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
+          <a class="btn-outline" href="https://github.com/chapagainsujan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn-outline" href="https://wa.me/9779865532285" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a class="btn-outline" href="mailto:chapagainsujan45@gmail.com"><i class="fa-regular fa-envelope"></i> E-mail</a>
+        </div>
+      </aside>
+      <section class="about-main">
+        <p>I am an <strong>Agricultural Researcher</strong> specializing in <strong>Agronomy</strong>, <strong>Plant Pathology</strong>, and <strong>Plant Breeding</strong>. My work focuses on integrating field phenotyping, stress physiology, multivariate statistics, and reproducible data workflows in <strong>R</strong> and <strong>Python</strong> to enhance crop productivity and resilience.</p>
+        <p>My research experience includes evaluating drought physiological responses in cereal crops using sensors (NDVI, canopy temperature), assessing botanical extracts against fungal pathogens, and analyzing genetic diversity across landraces using linear mixed-effects models (REML/BLUP) and selection indices.</p>
+
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>B.S. in Agricultural Science</strong><br>
+            Institute of Agriculture and Animal Science (IAAS), Tribhuvan University, Nepal<br>
+            Best Undergraduate Student
+          </li>
         </ul>
-      </li>
-      <li><button class="nav-link caret">Research</button>
-        <ul class="dropdown-menu">
-          <li><a href="projects.html">Projects &amp; Grants</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="affiliations.html">Affiliations</a></li>
-        </ul>
-      </li>
-      <li><a class="nav-link" href="affiliations.html">Affiliations</a></li>
-      <li><a class="nav-link" href="blogs.html">Blogs</a></li>
-    </ul>
-
-    <!-- Search Box in Navbar -->
-    <div class="nav-search">
-      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-      <input type="text" placeholder="Search..." aria-label="Search site">
+      </section>
     </div>
 
-    <div class="nav-right">
-      <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
-      <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-      <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-  </div>
-</header>
+    <!-- Recent Posts Section (Quarto Card Grid Layout) -->
+    <h2 class="section-title">Recent Posts</h2>
+    <p class="section-lead">Check out the latest <a href="publications.html">Papers</a>, <a href="news.html">News</a>, <a href="projects.html">Events</a>, and <a href="news.html">More &raquo;</a></p>
 
-<main>
-<div class="about">
-  <aside class="about-side">
-    <img class="profile-img" src="Image/profile.png" alt="Sujan Chapagain"
-         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="profile-fallback"><i class="fa-regular fa-user"></i></div>
-    <div class="about-name">Sujan Chapagain</div>
-    <div class="link-buttons">
-      <a class="btn-outline" href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-      <a class="btn-outline" href="https://www.researchgate.net/profile/Sujan-Chapagain-2" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-      <a class="btn-outline" href="https://orcid.org/0000-0002-2037-3491" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i> ORCID</a>
-      <a class="btn-outline" href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
-      <a class="btn-outline" href="https://github.com/chapagainsujan" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a class="btn-outline" href="https://wa.me/9779865532285" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-      <a class="btn-outline" href="mailto:chapagainsujan45@gmail.com"><i class="fa-regular fa-envelope"></i> E-mail</a>
-    </div>
-  </aside>
-  <section class="about-main">
-    <p>I am an <strong>Agricultural Researcher</strong> specializing in <strong>Agronomy</strong>, <strong>Plant Pathology</strong>, and <strong>Plant Breeding</strong>. My work focuses on integrating field phenotyping, stress physiology, multivariate statistics, and reproducible data workflows in <strong>R</strong> and <strong>Python</strong> to enhance crop productivity and resilience.</p>
-    <p>My research experience includes evaluating drought physiological responses in cereal crops using sensors (NDVI, canopy temperature), assessing botanical extracts against fungal pathogens, and analyzing genetic diversity across landraces using linear mixed-effects models (REML/BLUP) and selection indices.</p>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="news.html">
+          <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Quarto Academic Website Examples">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title"><a href="news.html">Joined the American Phytopathological Society (APS)</a></h3>
+        </div>
+        <div class="card-date">OCT 15, 2024</div>
+      </div>
 
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>B.S. in Agricultural Science</strong><br>
-        Institute of Agriculture and Animal Science (IAAS), Tribhuvan University, Nepal<br>
-        Best Undergraduate Student
-      </li>
-    </ul>
-  </section>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="news.html">
+          <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Event item">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title"><a href="projects.html">Received Undergraduate Research Grant (USD 2200)</a></h3>
+        </div>
+        <div class="card-date">SEP 3, 2024</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="news.html">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" alt="News item">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title"><a href="news.html">Paper published in Advances in Agriculture</a></h3>
+        </div>
+        <div class="card-date">JUN 24, 2024</div>
+      </div>
+    </div>
+
+    <p class="right"><a href="news.html">All Posts &raquo;</a></p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>Sujan Chapagain &copy; <span id="year">2026</span></div>
+      <div class="footer-icons">
+        <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+        <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
 </div>
 
-<!-- Recent Posts Section (Quarto Card Grid Layout) -->
-<h2 class="section-title">Recent Posts</h2>
-<p class="section-lead">Check out the latest <a href="publications.html">Papers</a>, <a href="news.html">News</a>, <a href="projects.html">Events</a>, and <a href="news.html">More &raquo;</a></p>
-
-<div class="cards">
-  <!-- Card 1 -->
-  <div class="card">
-    <a href="news.html">
-      <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Quarto Academic Website Examples">
-    </a>
-    <div class="card-body">
-      <h3 class="card-title"><a href="news.html">Joined the American Phytopathological Society (APS)</a></h3>
-    </div>
-    <div class="card-date">OCT 15, 2024</div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="card">
-    <a href="news.html">
-      <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Event item">
-    </a>
-    <div class="card-body">
-      <h3 class="card-title"><a href="projects.html">Received Undegraduate Research Grant (USD 2200)</a></h3>
-    </div>
-    <div class="card-date">SEP 3, 2024</div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card">
-    <a href="news.html">
-      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" alt="News item">
-    </a>
-    <div class="card-body">
-      <h3 class="card-title"><a href="news.html">Paper published in Advances in Agriculture</a></h3>
-    </div>
-    <div class="card-date">JUN 24, 2024</div>
-  </div>
-</div>
-
-<p class="right"><a href="news.html">All Posts &raquo;</a></p>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <div>Sujan Chapagain &copy; <span id="year">2026</span></div>
-    <div class="footer-icons">
-      <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-      <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-  </div>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>
