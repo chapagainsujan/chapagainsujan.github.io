@@ -7,11 +7,83 @@
 <meta name="description" content="Sujan Chapagain - Agricultural Researcher | Agronomy, Plant Pathology and Plant Breeding">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Navigation Bar Layout & Search Styling */
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+  }
+
+  .nav-search input {
+    width: 170px;
+    height: 32px;
+    padding: 4px 10px 4px 30px;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #ffffff;
+    border: 1.5px solid #a4b3ca;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-search input:focus {
+    border-color: #5c93e6;
+    box-shadow: 0 0 0 2px rgba(92, 147, 230, 0.25);
+  }
+
+  .nav-search .search-icon {
+    position: absolute;
+    left: 9px;
+    color: #8c98a9;
+    font-size: 0.85rem;
+    pointer-events: none;
+  }
+
+  /* Main Container Centering & Text Formatting */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  .contact-grid p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+</style>
 </head>
 <body>
 <header class="navbar">
   <div class="navbar-inner">
-    <a class="brand" href="index.html">Sujan Chapagain </a>
+    <a class="brand" href="index.html">Sujan Chapagain</a>
     <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-left">
       <li><button class="nav-link caret active">About</button>
@@ -19,48 +91,64 @@
           <li><a href="index.html">About me</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="contact.html">Contact</a></li>
-        </ul></li>
+        </ul>
+      </li>
       <li><button class="nav-link caret">Research</button>
         <ul class="dropdown-menu">
           <li><a href="projects.html">Projects &amp; Grants</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="affiliations.html">Affiliations</a></li>
-        </ul></li>
+        </ul>
+      </li>
       <li><a class="nav-link" href="teaching.html">Teaching</a></li>
       <li><a class="nav-link" href="blogs.html">Blogs</a></li>
     </ul>
+    
+    <!-- Right Section with Links & Search Bar -->
     <div class="nav-right">
       <a class="cv" href="files/Chapagain_Sujan_CV.pdf">CV</a>
       <a href="https://github.com/chapagainsujan" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
       <a href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      
+      <!-- Right-Aligned Search Bar -->
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="" aria-label="Search site">
+      </div>
     </div>
   </div>
 </header>
 
 <main>
-<div class="page-header"><h1 class="title">Contact</h1><p class="subtitle">Get in touch about research, collaboration or opportunities</p></div><div class="contact-grid">
-  <div>
-    <h2>Details</h2>
-    <p class="detail"><span class="label">Name</span>Sujan Chapagain</p>
-    <p class="detail"><span class="label">Institution</span>Institute of Agriculture and Animal Science (IAAS)<br>Tribhuvan University, Nepal</p>
-    <p class="detail"><span class="label">Email</span><a href="mailto:chapagainsujan45@gmail.com">chapagainsujan45@gmail.com</a></p>
-    <p class="detail"><span class="label">WhatsApp</span><a href="https://wa.me/9779865532285" target="_blank" rel="noopener">+977 986-5532285</a></p>
-    <p><a class="btn-outline" href="files/Chapagain_Sujan_CV.pdf"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
+  <div class="page-header">
+    <h1 class="title">Contact</h1>
+    <p class="subtitle">Get in touch about research, collaboration or opportunities</p>
   </div>
-  <div>
-    <h2>Profiles</h2>
-    <ul class="link-rows">
-<li><i class="fa-brands fa-linkedin-in"></i><span class="name">LinkedIn</span><a class="handle" href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener">sujan-chapagain-240617140</a></li>
-<li><i class="fa-brands fa-researchgate"></i><span class="name">ResearchGate</span><a class="handle" href="https://www.researchgate.net/profile/Sujan-Chapagain-2" target="_blank" rel="noopener">Sujan-Chapagain-2</a></li>
-<li><i class="fa-brands fa-orcid"></i><span class="name">ORCID</span><a class="handle" href="https://orcid.org/0000-0002-2037-3491" target="_blank" rel="noopener">0000-0002-2037-3491</a></li>
-<li><i class="fa-brands fa-google-scholar"></i><span class="name">Google Scholar</span><a class="handle" href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener">Citations profile</a></li>
-<li><i class="fa-brands fa-github"></i><span class="name">GitHub</span><a class="handle" href="https://github.com/chapagainsujan" target="_blank" rel="noopener">chapagainsujan</a></li>
-<li><i class="fa-brands fa-whatsapp"></i><span class="name">WhatsApp</span><a class="handle" href="https://wa.me/9779865532285" target="_blank" rel="noopener">+977 986-5532285</a></li>
-<li><i class="fa-regular fa-envelope"></i><span class="name">Email</span><a class="handle" href="mailto:chapagainsujan45@gmail.com">chapagainsujan45@gmail.com</a></li>
-    </ul>
+  
+  <div class="contact-grid">
+    <div>
+      <h2>Details</h2>
+      <p class="detail"><span class="label">Name</span>Sujan Chapagain</p>
+      <p class="detail"><span class="label">Institution</span>Institute of Agriculture and Animal Science (IAAS)<br>Tribhuvan University, Nepal</p>
+      <p class="detail"><span class="label">Email</span><a href="mailto:chapagainsujan45@gmail.com">chapagainsujan45@gmail.com</a></p>
+      <p class="detail"><span class="label">WhatsApp</span><a href="https://wa.me/9779865532285" target="_blank" rel="noopener">+977 986-5532285</a></p>
+      <p><a class="btn-outline" href="files/Chapagain_Sujan_CV.pdf"><i class="fa-solid fa-file-pdf"></i> Download CV</a></p>
+    </div>
+    
+    <div>
+      <h2>Profiles</h2>
+      <ul class="link-rows">
+        <li><i class="fa-brands fa-linkedin-in"></i><span class="name">LinkedIn</span><a class="handle" href="https://www.linkedin.com/in/sujan-chapagain-240617140/" target="_blank" rel="noopener">sujan-chapagain-240617140</a></li>
+        <li><i class="fa-brands fa-researchgate"></i><span class="name">ResearchGate</span><a class="handle" href="https://www.researchgate.net/profile/Sujan-Chapagain-2" target="_blank" rel="noopener">Sujan-Chapagain-2</a></li>
+        <li><i class="fa-brands fa-orcid"></i><span class="name">ORCID</span><a class="handle" href="https://orcid.org/0000-0002-2037-3491" target="_blank" rel="noopener">0000-0002-2037-3491</a></li>
+        <li><i class="fa-brands fa-google-scholar"></i><span class="name">Google Scholar</span><a class="handle" href="https://scholar.google.com/citations?user=jgRf4AgAAAAJ&hl=en" target="_blank" rel="noopener">Citations profile</a></li>
+        <li><i class="fa-brands fa-github"></i><span class="name">GitHub</span><a class="handle" href="https://github.com/chapagainsujan" target="_blank" rel="noopener">chapagainsujan</a></li>
+        <li><i class="fa-brands fa-whatsapp"></i><span class="name">WhatsApp</span><a class="handle" href="https://wa.me/9779865532285" target="_blank" rel="noopener">+977 986-5532285</a></li>
+        <li><i class="fa-regular fa-envelope"></i><span class="name">Email</span><a class="handle" href="mailto:chapagainsujan45@gmail.com">chapagainsujan45@gmail.com</a></li>
+      </ul>
+    </div>
   </div>
-</div>
 </main>
 
 <footer>
